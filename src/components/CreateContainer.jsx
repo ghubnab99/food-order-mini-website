@@ -168,6 +168,17 @@ const CreateContainer = () => {
     return (
         <div className='w-full min-h-screen h-auto flex items-center justify-center'>
             <div className="w-[90%] md:w-[75%] border border-gray-200 rounded-lg p-4 flex flex-col items-center justify-center gap-4">
+
+            <motion.p 
+                initial={{opacity : 0}}
+                animate={{opacity : 1}}
+                exit={{opacity : 0}}
+                className={`w-full p-2 rounded-lg text-center text-lg font-semibold bg-red-200`}>
+                Since this is a demo, actual uploads to the database have been disabled
+            </motion.p>
+
+
+
                 {
                     fields && 
                     (
@@ -281,7 +292,7 @@ const CreateContainer = () => {
                 <div className="flex items-center w-full">
                     <button 
                         type='button' 
-                        onClick={saveDetails}
+                        //onClick={saveDetails}
                         className="ml-0 md:ml-auto w-full md:w-auto border-none outline-none bg-emerald-500 px-12 py-2 
                         rounded-lg text-lg text-white font-semibold">
                         Save
